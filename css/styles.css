@@ -1,0 +1,10 @@
+/* My Awesome Styles */
+
+/* Diagnostic Styling 
+  * Change Background Color
+  * Outline Elements
+*/
+
+* {
+    outline: 1px dotted black;
+}
