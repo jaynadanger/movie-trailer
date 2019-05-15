@@ -10,9 +10,43 @@
 }
 */
 
+/* 
+  *https://cssreference.io/
+  *https://css-tricks.com/almanac/
+*/
+
+
+
+body{
+  background-color: #f4c1c8;
+  display: grid;
+  grid-template-columns: 580px  20px 580px;
+  grid-template-rows: 725px;
+}
+
+#left{
+  height: 725px;
+  width: 580px;
+  background-color: silver;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  
+}
+
+#right{
+  height: 725px;
+  width: 580px;
+  background-color: white;
+  grid-column: 3/4;
+  grid-row: 1/2
+  
+}
+
+div{
+  margin: 20px;
+}
+
 video{
-  border: 10px solid purple;
-  /* Kludge */
-  height: 100%;
-  width: 100%;
+  width: 90%;
+  
 }
