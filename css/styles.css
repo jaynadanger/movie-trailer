@@ -208,7 +208,7 @@ video{
   background-size: cover;
 }
 
-#footer a{
+.footer a{
   text-decoration: none;
   color:white;
 }
