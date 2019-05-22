@@ -2,4 +2,4 @@
 
 Sources
 * [Hover Cards](https://codepen.io/johnpeele/pen/rVOroW)
-* [Folder Animation]()
+* [Folder Animation](https://codepen.io/jackinriver/details/PyomPj#forks)
