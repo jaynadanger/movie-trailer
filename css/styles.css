@@ -16,54 +16,85 @@
 */
 
 
-
 body{
-  background-color: #f4c1c8;
-  display: grid;
-  grid-template-columns: 580px  20px 580px;
-  grid-template-rows: 725px;
-}
-
-#left{
-  position: relative;
-  height: 725px;
-  width: 580px;
-  background-color: silver;
-  grid-column: 1/2;
-  grid-row: 1/2;
+  margin:0;
+  padding:0;
+  
   
 }
 
+.bg0{
+  background:url(bgzero.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.bg1{
+  background:url(bgone.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+.card{
+    position: absolute;
+    top: 50%;
+    left:60%;
+    transform: translate(-50%,-50%) perspective(2000px);
+    width: 800px;
+    height:1000px;
+    background: #fff;
+    transform-style: preserve-3d;
+    box-shadow: inset 200px 0 50px rgba(0,0,0,.5), 0 20px 150px rgba(0,0,0,.7);
+    transition: 1.3s ease-in-out;
+}
+.js-click2{
+    transform: translate(-30%,-50%) perspective(2000px);
+    box-shadow: inset 10px 0 30px rgba(0,0,0,.3), 0 20px 90px rgba(0,0,0,.3);
+}
 
 #foldericon{
   position: absolute;
   height: 140px;
-  top: 300px;
-  left: 220px;
+  top: 350px;
+  left: 315px;
   stroke: white;
   stroke-width: 3px;
 }
 
-#right{
-  position: relative;
-  height: 725px;
-  width: 580px;
-  background-color: white;
-  grid-column: 3/4;
-  grid-row: 1/2
-  
+.card:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: -3px;
+    width: 3px;
+    height: 100%;
+    background: silver;
+    
+}
+.imgbox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1.3s ease-in-out;
+    background: pink;
 }
 
-div{
-  margin: 20px;
-  border-radius: 5px;
+.js-click{
+    transform: rotateY(-168deg);
+}
+
+.details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: -1;    
 }
 
 video{
   width: 90%;
-  position: absolute;
+  position: flex;
   margin: 5% 5% 0% 5%;
-  bottom: 5%;
   border-radius: 5px;
   
 }
@@ -71,8 +102,8 @@ video{
 #netflix{
   height: 20px;
   position: absolute;
-  top: 695px;
-  left: 490px;
+  top: 582px;
+  right: 110px;
   stroke: black;
   
 }
@@ -80,36 +111,29 @@ video{
 #imdb{
   height: 20px;
   position: absolute;
-  top: 695px;
-  left: 510px;
+  top: 582px;
+  right: 60px;
 }
 
-/* Shine */
-#left:after {
-	content:'';
-  top:0;
-	width:380px;
-	height:725px;
-	position: absolute;
-  margin: 0px 20px 0px 20px;
-	z-index:1;
-	animation: slide 3s;
-	 
-  /* 
-  CSS Gradient - complete browser support from http://www.colorzilla.com/gradient-editor/ 
-  */
-  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(128,186,232,0) 99%, rgba(125,185,232,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.8)), color-stop(99%,rgba(128,186,232,0)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* IE10+ */
-	background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+.cp{
+  position: absolute;
+  top: 925px;
+  left: 325px;
+  font-size: 12px;
+  text-align: center;
 }
 
-/* animation */
-
-@keyframes slide {
-	0% {transform:translateX(-50%);}
-	100% {transform:translateX(50%);}
+#clip{
+  height: 20px;
+  position: absolute;
+  left: 315px;
+  top: 20px;
 }
+
+section{
+  border: 2px solid red;
+  height: 325px;
+  display: flex;
+}
+
+
